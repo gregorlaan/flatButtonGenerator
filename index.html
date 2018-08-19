@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flat Button Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="generator">
+        <pre>{{buttonStyles}}</pre>
+        <button v-bind:style="[buttonStyles]">
+            Click Here
+        </button>
+
+        <h2>Border Radius</h2>
+
+        <form>
+            <input v-model="buttonStyles.borderRadius" type="radio" name="borderRadius.none" id="borderRadius.none" value="0">
+            <label for="borderRadius.none">none</label>
+
+            <input v-model="buttonStyles.borderRadius" type="radio" name="borderRadius.3px" id="borderRadius.3px" value="3px">
+            <label for="borderRadius.3px">3px</label>
+
+            <input v-model="buttonStyles.borderRadius" type="radio" name="borderRadius.50%" id="borderRadius.50%" value="50%">
+            <label for="borderRadius.50%">50%</label>
+        </form>
+
+        <h2>Border Style</h2>
+
+        <form>
+            <input v-model="buttonStyles.borderStyle" type="radio" name="borderStyle.none" id="borderStyle.none" value="none">
+            <label for="borderStyle.none">none</label>
+
+            <input v-model="buttonStyles.borderStyle" type="radio" name="borderStyle.solid" id="borderStyle.solid" value="solid">
+            <label for="borderStyle.solid">solid</label>
+
+            <input v-model="buttonStyles.borderStyle" type="radio" name="borderStyle.dashed" id="borderStyle.dashed" value="dashed">
+            <label for="borderStyle.dashed">dashed</label>
+
+            <input v-model="buttonStyles.borderStyle" type="radio" name="borderStyle.dotted" id="borderStyle.dotted" value="dotted">
+            <label for="borderStyle.dotted">dotted</label>
+        </form>
+
+        <h2>Border Width</h2>
+
+        <form>
+            <input v-model="buttonStyles.borderWidth" type="radio" name="borderWidth.none" id="borderWidth.none" value="0">
+            <label for="borderRadius.none">none</label>
+
+            <input v-model="buttonStyles.borderWidth" type="radio" name="borderWidth.1px" id="borderWidth.1px" value="1px">
+            <label for="borderWidth.1px">1px</label>
+
+            <input v-model="buttonStyles.borderWidth" type="radio" name="borderWidth.2px" id="borderWidth.2px" value="2px">
+            <label for="borderWidth.2px">2px</label>
+
+            <input v-model="buttonStyles.borderWidth" type="radio" name="borderWidth.3px" id="borderWidth.3px" value="3px">
+            <label for="borderWidth.3px">3px</label>
+
+        </form>
+
+
+    </div>
+
+    <script src="vue.min.js"></script>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
